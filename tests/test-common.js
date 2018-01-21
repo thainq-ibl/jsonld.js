@@ -29,7 +29,7 @@ const manifest = options.manifest || {
 const TEST_TYPES = {
   'jld:CompactTest': {
     skip: {
-      regex: [/#t0073/, /#t[anp]/]
+      regex: [/#t0073/, /#t[ap]/]
     },
     fn: 'compact',
     params: [
@@ -40,9 +40,7 @@ const TEST_TYPES = {
     compare: compareExpectedJson
   },
   'jld:ExpandTest': {
-    skip: {
-      regex: [/#tn/]
-    },
+    skip: {},
     fn: 'expand',
     params: [
       readTestUrl('input'),
